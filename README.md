@@ -22,9 +22,12 @@ go('/tmp/file1.txt', '/tmp2/file2.txt');//this is just copy
 
 
 //you can customize the copying process
-go('/tmp/file1.txt', '/tmp2/file2.txt', function(stats, content){
+go('/tmp/file1.txt', '/tmp2/file2.txt', function(content){
     return content.replace('ABC', 'PLA');
 });
+
+//binary file will be copied directly no matter whether you provide a process function
+go('/tmp/logo.png', '/tmp2/logo2.png');
 ```
 
 ## LICENSE ##

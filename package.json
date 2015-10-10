@@ -27,6 +27,10 @@
   "homepage": "https://github.com/leftstick/go-txt#readme",
   "devDependencies": {
     "mocha": "^2.3.3",
-    "should": "^7.1.0"
+    "should": "^7.1.0",
+    "rimraf": "^2.4.3"
+  },
+  "dependencies": {
+    "isbinaryfile": "^3.0.0"
   }
 }
