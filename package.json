@@ -1,0 +1,32 @@
+{
+  "name": "go-txt",
+  "version": "1.0.0",
+  "description": "Quickly copy file from one place to another. You can customize the copying process, for example: replace words",
+  "main": "./index.js",
+  "scripts": {
+    "test": "mocha --reporter nyan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leftstick/go-txt.git"
+  },
+  "keywords": [
+    "file",
+    "copy",
+    "process",
+    "customize"
+  ],
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "author": "Howard.Zuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leftstick/go-txt/issues"
+  },
+  "homepage": "https://github.com/leftstick/go-txt#readme",
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "should": "^7.1.0"
+  }
+}
