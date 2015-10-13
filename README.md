@@ -1,5 +1,5 @@
 # go-txt
-==================
+
 [![NPM version][npm-image]][npm-url]
 ![][david-url]
 ![][travis-url]
