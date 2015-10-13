@@ -1,5 +1,6 @@
 var fs = require('fs');
 var isBinaryFile = require('isbinaryfile');
+//test
 
 var copyFile = function(src, dest, process) {
     if (!src) {
