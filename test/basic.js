@@ -36,7 +36,6 @@ describe('basic test', function() {
         try {
             go();
         } catch (e) {
-            console.log(e.message)
             should(e.message).eql('src must be set as a file path', 'src doesn\'t set');
             done();
         }
@@ -46,7 +45,6 @@ describe('basic test', function() {
         try {
             go(src);
         } catch (e) {
-            console.log(e.message)
             should(e.message).eql('dest must be set as a file path', 'dest doesn\'t set');
             done();
         }
