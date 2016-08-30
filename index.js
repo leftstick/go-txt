@@ -22,5 +22,5 @@ var copyFile = function(src, dest, process) {
     }
     fs.writeFileSync(dest, after, 'utf8');
 };
-console.log('test');
+
 module.exports = copyFile;
