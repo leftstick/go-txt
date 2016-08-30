@@ -4,7 +4,7 @@ var isBinaryFile = require('isbinaryfile');
 
 var copyFile = function(src, dest, process) {
     if (!src) {
-        throw new Error('src must be set as a file path');
+        throw new Error('src mus111t be set as a file path');
     }
     if (!dest) {
         throw new Error('dest must be set as a file path');
