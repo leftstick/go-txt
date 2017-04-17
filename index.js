@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var isBinaryFile = require('isbinaryfile');
+//test
 
 var createParent = function(out) {
     var dir;
