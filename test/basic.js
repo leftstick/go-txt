@@ -8,8 +8,9 @@ describe('basic test', function() {
 
     var src = path.resolve(__dirname, 'tmp', 'hello.txt');
     var src2 = path.resolve(__dirname, 'tmp', 'logo.png');
-    var dest = path.resolve(__dirname, 'tmp', '_hello.txt');
-    var dest2 = path.resolve(__dirname, 'tmp', '_logo.png');
+    var dest = path.resolve(__dirname, 'tmp', 'ttt', '_hello.txt');
+    var dest2 = path.resolve(__dirname, 'tmp', 'ttt', '_logo.png');
+    var destFolder = path.resolve(__dirname, 'tmp', 'ttt');
 
     it('simple copy', function(done) {
         go(src, dest);
@@ -35,7 +36,6 @@ describe('basic test', function() {
         try {
             go();
         } catch (e) {
-            console.log(e.message)
             should(e.message).eql('src must be set as a file path', 'src doesn\'t set');
             done();
         }
@@ -45,7 +45,6 @@ describe('basic test', function() {
         try {
             go(src);
         } catch (e) {
-            console.log(e.message)
             should(e.message).eql('dest must be set as a file path', 'dest doesn\'t set');
             done();
         }
@@ -53,8 +52,7 @@ describe('basic test', function() {
 
     afterEach(function() {
         try {
-            rimraf.sync(dest);
-            rimraf.sync(dest2);
+            rimraf.sync(destFolder);
         } catch (e) {}
     });
 
