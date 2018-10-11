@@ -31,6 +31,7 @@
     "rimraf": "^2.4.3"
   },
   "dependencies": {
-    "isbinaryfile": "^3.0.0"
+    "isbinaryfile": "^3.0.0",
+    "mkdirp": "^0.5.1"
   }
 }
