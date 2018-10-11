@@ -1,27 +1,26 @@
 var fs = require('fs');
 var path = require('path');
 var isBinaryFile = require('isbinaryfile');
-//test
+var mkdirp = require('mkdirp');
 
 var createParent = function(out) {
-    var dir;
-    dir = path.dirname(out);
+    var dir = path.dirname(out);
     try {
-        var stat = fs.statSync(dir);
+        fs.statSync(dir);
     } catch (e) {
-        try {
-            fs.mkdirSync(dir);
-        } catch (e) {
-            createParent(dir);
-            createParent(out);
-        }
+        mkdirp.sync(dir);
     }
 };
 
 var copyFile = function(src, dest, process) {
     if (!src) {
-        throw new Error('src mus111t be set as a file path');
+        throw new Error('src must be set as a file path');
     }
+    
+    if (!fs.existsSync(src)) {
+        throw new Error('source file is not existed.');
+    }
+
     if (!dest) {
         throw new Error('dest must be set as a file path');
     }
